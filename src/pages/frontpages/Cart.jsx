@@ -15,26 +15,26 @@ export default function Cart() {
       <div className="space-y-4">
         {/* Menampilkan item di cart */}
         {cart.map((item) => (
-          <div
-            key={item.id}
-            className="flex items-center justify-between border p-4 rounded-lg shadow-sm"
-          >
-            <div className="flex items-center gap-4">
+         <div
+         key={item.id}
+          className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border p-4 rounded-lg shadow-sm">
+
+            <div className="flex items-center gap-4 min-w-0">
               <img
                 src={item.img}
                 alt={item.name}
                 className="w-16 h-16 rounded-md"
               />
 
-              <div>
-                <h2 className="font-semibold">{item.name}</h2>
+              <div className="min-w-0">
+               <h2 className="font-semibold break-words">{item.name}</h2>
                 <p className="text-gray-600">
                   Rp {item.price.toLocaleString()}
                 </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 w-full sm:w-auto">
               {/* Input untuk update qty */}
               <input
                 type="number"
