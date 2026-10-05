@@ -6,14 +6,14 @@ export default function Navbar() {
   const { totalQty } = useCart();
 
   return (
-   <nav className="bg-pink-500 text-white px-6 py-4 flex justify-between items-center">
+   <nav className="bg-pink-500 text-white px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
       {/* Logo */}
       <Link to="/" className="font-bold text-xl">
         YukShopPink
       </Link>
 
       {/* Menu Navigasi */}
-      <div className="flex gap-6">
+      <div className="flex flex-wrap justify-center gap-4">
         {/* Dashboard Links */}
         <Link to="/" className="hover:text-gray-200">
           Dashboard
