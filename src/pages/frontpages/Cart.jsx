@@ -17,9 +17,9 @@ export default function Cart() {
         {cart.map((item) => (
          <div
          key={item.id}
-          className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border p-4 rounded-lg shadow-sm">
+          className="flex flex-col gap-4 border p-4 rounded-lg shadow-sm">
 
-            <div className="flex items-center gap-4 min-w-0">
+            <div className="flex items-center gap-4 w-full min-w-0">
               <img
                 src={item.img}
                 alt={item.name}
@@ -34,7 +34,7 @@ export default function Cart() {
               </div>
             </div>
 
-            <div className="flex items-center gap-2 w-full sm:w-auto">
+            <div className="flex items-center justify -end gap-2 w-full">
               {/* Input untuk update qty */}
               <input
                 type="number"
